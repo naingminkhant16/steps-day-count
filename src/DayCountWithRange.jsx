@@ -33,11 +33,13 @@ export default function DayCountWithRange() {
                 <div className="mt-3 font-semibold">
                     {date.toDateString()}
                 </div>
-                <div className="mt-3">
-                    <button className={'px-3 text-white bg-indigo-500 rounded-full font-bold cursor-pointer'}
-                            onClick={handleReset}>Reset
-                    </button>
-                </div>
+                {(step !== 1 || count !== 0) && (
+                    <div className="mt-3">
+                        <button className={'px-3 text-white bg-indigo-500 rounded-full font-bold cursor-pointer'}
+                                onClick={handleReset}>Reset
+                        </button>
+                    </div>
+                )}
             </div>
         </>
     )
